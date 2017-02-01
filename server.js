@@ -1,12 +1,7 @@
 var http = require('http');
+var app = require('./config/express');
 
-http.createServer(function(req, res){
-
-  var indice = req.url.indexOf('=');
-  var parametro = req.url.substr(indice+1);
-  res.end(parametro);
-
-}).listen(3000,function(){
+http.createServer(app).listen(3000,function(){
   console.log('NEH');
-  
+
 });
