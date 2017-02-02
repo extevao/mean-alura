@@ -4,15 +4,15 @@ var app = express();
 app.use(express.static('./public'));
 
 app.get('/v1/fotos', function(req, res) {
-    var fotos = [{
+    let fotos = [{
             _id: 1,
             titulo: 'Leão',
-            url: 'http://www.fundosanimais.com/Imagens/fotos-leoes.jpg'
+            url: 'http://www.fundosanimais.com/Minis/leoes.jpg'
         },
         {
             _id: 2,
-            titulo: 'Leão2',
-            url: 'http://www.fundosanimais.com/Imagens/fotos-leoes.jpg'
+            titulo: 'Leão 2',
+            url: 'http://www.fundosanimais.com/Minis/leoes.jpg'
         }
     ];
     res.json(fotos);
