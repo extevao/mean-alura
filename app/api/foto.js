@@ -30,4 +30,10 @@ api.removePorId = function(req, res){
   res.sendStatus(204);
 }
 
+api.adiciona = function(req, res){
+  console.log(req.body);
+  fotos.push(req.body);
+  res.json(foto);
+}
+
 module.exports = api;
